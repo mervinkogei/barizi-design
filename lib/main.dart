@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         cardColor: const Color(0xffBEBFC4),
         canvasColor: const Color(0xff43484B),
+        hintColor: const Color(0xff777E90),
         useMaterial3: true,
         fontFamily: 'Product Sans',
       ),

@@ -13,13 +13,14 @@ class _HistoryScreenState extends State<HistoryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: DataFunction.menuAppBar(context, 'My Orders'),
       backgroundColor: Colors.white,
            body: SingleChildScrollView(
-          child: Column(children: [
-            _tabSection(context),
-          ]),
-        ));
+             child: Container(
+               child: _tabSection(context),
+             ),
+           ));
   }
 
   Widget _tabSection(BuildContext context) {
@@ -28,7 +29,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
-          SizedBox(height: 5),
+         const  SizedBox(height: 5),
           Container(
             padding: const EdgeInsets.all(5.0),
             child: TabBar(
@@ -54,155 +55,132 @@ class _HistoryScreenState extends State<HistoryScreen> {
               ),
             ]),
           ),
-          SizedBox(height: 5),
-          Container(
-            height: MediaQuery.of(context).size.height,
-            child: TabBarView(children: [
-              Container(
-                child: Column(
-                  children: [
-                    Card(
-                      elevation: 5,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+          const SizedBox(height: 5),
+          SingleChildScrollView(
+            child: Container(
+              height: MediaQuery.of(context).size.height,
+              child: TabBarView(children: [
+                
+            Container(
+              child: SingleChildScrollView(
+                child: ListView.builder(
+                  itemCount: 6,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (context, index){
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                      child: Container(
+                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          border: Border(
+                            bottom: BorderSide(
+                              color: Colors.grey,
+                              width: 2.0, 
+                            ),
+                          ),
+                        ),
                         child: Column(
                           children: [
-                            Container(
-                              color: Colors.grey,
-                              child: const Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                            Card(
+                              elevation: 0,
+                              color: const Color(0xffffffff),
+                              shape: RoundedRectangleBorder(
+                                side:  const BorderSide(
+                                  width: 0.1,
+                                  color: Colors.grey
+                                ),
+                              borderRadius: BorderRadius.circular(30.0),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Column(
                                   children: [
-                                    Text(
-                                      'Not Applicable',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    Row(
+                                    const Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Text('Requested',
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold)),
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        Icon(
-                                          Icons.circle,
-                                          color: Colors.green,
-                                        )
+                                        Text('Order #1514', style: ThemeStyling.orderTitle,),
+                                        Text('13/05/2021', style: ThemeStyling.orderDate,),
                                       ],
                                     ),
+                                    const SizedBox(height: 10),
+                                    const Row(
+                                      children: [
+                                        Text('Tracking number: '),
+                                        Text('IK987362341', style: ThemeStyling.orderDetails,),
+                                    
+                                      ],
+                                    ),
+                                     const  SizedBox(height: 10),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        RichText(
+                                        text: const TextSpan(
+                                            text: 'Quantity:',
+                                            style: TextStyle(
+                                                color: Colors.black, fontSize: 18),
+                                            children: <TextSpan>[
+                                              TextSpan(text: ' 2', style: ThemeStyling.orderDetails,
+                                              )
+                                            ]
+                                        ),
+                                      ),
+                                    
+                                      RichText(
+                                      text: const TextSpan(
+                                          text: 'Subtotal: ',
+                                          style: TextStyle(
+                                              color: Colors.black, fontSize: 18),
+                                          children: <TextSpan>[
+                                            TextSpan(text: '\$110',style: ThemeStyling.orderDetails,
+                                            )
+                                          ]
+                                      ),
+                                    ),
+                                      ],
+                                    ),
+                                    const SizedBox(height: 10),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        const Text('DELIVERED', style: ThemeStyling.orderSuccessTitle,),
+                                        ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                               side: const BorderSide(
+                                                width: 1.5,
+                                                color: Colors.black
+                                               )
+                                                ),
+                                            onPressed: () {},
+                                            child: const Text('Details', style: ThemeStyling.orderDetails,)),
+                                      ],
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    )
                                   ],
                                 ),
                               ),
-                            ),
-                            const Row(
-                              children: [
-                                Icon(Icons.my_location_outlined),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Expanded(
-                                    child: Text(
-                                        'Kitengela, Roundabout along Mombasa Road Next to Total Petrol Station'))
-                              ],
-                            ),
-                          
-                            const Row(
-                              children: [
-                                Icon(Icons.location_on_outlined),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Expanded(
-                                    child: Text(
-                                        'Kitengela, Roundabout along Mombasa Road Next to Total Petrol Station'))
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                RichText(
-                                    text: const TextSpan(
-                                  text: 'Order ID:  ',
-                                  style: TextStyle(
-                                    fontSize: 17.0,
-                                    color: Colors.black,
-                                  ),
-                                  children: [
-                                    WidgetSpan(
-                                      child: Text(
-                                        '#23940',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w900),
-                                      ),
-                                    ),
-                                  ],
-                                )),
-                                RichText(
-                                    text: const TextSpan(
-                                  text: 'Distance:  ',
-                                  style: TextStyle(
-                                    fontSize: 17.0,
-                                    color: Colors.black,
-                                  ),
-                                  children: [
-                                    WidgetSpan(
-                                      child: Text(
-                                        '5.6 KM',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w900),
-                                      ),
-                                    ),
-                                  ],
-                                )),
-                              ],
-                            ),
-                            const Divider(),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                        // backgroundColor: AppColors.brownColor
-                                        ),
-                                    onPressed: () {},
-                                    child: const Text(
-                                      'Cancel',
-                                      style: TextStyle(color: Colors.white),
-                                    )),
-                                ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                        // backgroundColor: AppColors.jonquil
-                                        ),
-                                    onPressed: () {},
-                                    child: const Text('Accept')),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 10,
                             )
                           ],
                         ),
                       ),
-                    )
-                  ],
+                    );            
+                    
+                  }
                 ),
               ),
-              Container(
-                child: Text("Articles Body"),
-              ),
-              Container(
-                child: Text("User Body"),
-              ),
-            ]),
+            ),
+                
+                Container(
+                  child: Text("Articles Body"),
+                ),
+                Container(
+                  child: Text("User Body"),
+                ),
+              ]),
+            ),
           ),
         ],
       ),
