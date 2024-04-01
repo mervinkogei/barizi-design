@@ -49,6 +49,7 @@ final List<GlobalKey<NavigatorState>> _navigatorKeys = [
             child: SizedBox(
           height: 100,
           child: BottomNavigationBar(
+            backgroundColor: Colors.white,
             selectedFontSize: 13,
             unselectedFontSize: 13,
             type: BottomNavigationBarType.fixed,
