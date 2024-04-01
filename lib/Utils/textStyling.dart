@@ -8,4 +8,7 @@ abstract class ThemeStyling {
 
   static const TextStyle welcomeButton = TextStyle(
       fontWeight: FontWeight.w700, fontSize: 16, fontFamily: "Product Sans", color: Colors.white);
+  
+  static const TextStyle titleAppBar = TextStyle(
+      fontWeight: FontWeight.w700, fontSize: 20, fontFamily: "Product Sans", color: Colors.black);
 }

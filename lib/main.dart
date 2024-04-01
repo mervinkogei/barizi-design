@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        cardColor: const Color(0xffBEBFC4),
         useMaterial3: true,
         fontFamily: 'Product Sans',
       ),

@@ -54,24 +54,24 @@ final List<GlobalKey<NavigatorState>> _navigatorKeys = [
             type: BottomNavigationBarType.fixed,
             showUnselectedLabels: false,
             showSelectedLabels: false,
-            items:  const <BottomNavigationBarItem>[
+            items:  <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                icon:  Icon(Icons.home, size: 23,),
+                icon:  Icon(Icons.home, size: 23,color: Theme.of(context).cardColor,),
                 activeIcon: Icon(Icons.home, color: Colors.black, size: 23,),
                 label: "Home",
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.search, size: 23,),
+                icon: Icon(Icons.search, size: 23,color: Theme.of(context).cardColor),
                 activeIcon:  Icon(Icons.search, color: Colors.black, size: 23,),
                 label: 'Explore',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_bag_outlined, size: 23,),
+                icon: Icon(Icons.shopping_bag_outlined, size: 23,color: Theme.of(context).cardColor),
                 activeIcon:  Icon(Icons.shopping_bag_outlined, color: Colors.black, size: 23,),
                 label: 'History',
               ),
              BottomNavigationBarItem(
-                icon: Icon(Icons.person, size: 23,),
+                icon: Icon(Icons.person, size: 23,color: Theme.of(context).cardColor),
                 activeIcon: Icon(Icons.person, color: Colors.black, size: 23,),
                 label: 'Profile',
               ),

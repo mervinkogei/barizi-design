@@ -1,3 +1,4 @@
+import 'package:barizi/Utils/data_function.dart';
 import 'package:flutter/material.dart';
 
 class HistoryScreen extends StatefulWidget {
@@ -10,6 +11,14 @@ class HistoryScreen extends StatefulWidget {
 class _HistoryScreenState extends State<HistoryScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: DataFunction.menuAppBar(context, 'My Orders'),
+      body: Column(
+        children: [
+          
+        ],
+      ),
+    );
+    
   }
 }
