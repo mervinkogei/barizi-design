@@ -1,3 +1,4 @@
+import 'package:barizi/Utils/textStyling.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -11,7 +12,7 @@ class WelcomeScreen extends StatelessWidget {
         height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("images/welcome.png"),
+              image: const AssetImage("images/welcome.png"),
               fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(
           const Color(0xff000000).withOpacity(0.5),
@@ -23,9 +24,9 @@ class WelcomeScreen extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 582,),
-              const Text('Welcome to GemStore!', style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.w700),),
+              const Text('Welcome to GemStore!', style: ThemeStyling.welcomeTitle),
               const SizedBox(height: 23),
-              const Text('The home for a fashionista',style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w700)),
+              const Text('The home for a fashionista',style: ThemeStyling.welcomeSubTitle),
               const SizedBox(height: 40,)
 ,              SizedBox(
                 width: 193,
@@ -41,7 +42,7 @@ class WelcomeScreen extends StatelessWidget {
                     )                    
                   ),
                   ),
-                  onPressed: (){}, child: const Text('Get Started', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 16),)))
+                  onPressed: (){}, child: const Text('Get Started', style: ThemeStyling.welcomeButton)))
             ],
           ),
       ),
