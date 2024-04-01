@@ -24,6 +24,12 @@ abstract class ThemeStyling {
   static const TextStyle orderSuccessTitle = TextStyle(
       fontWeight: FontWeight.w700, fontSize: 14, fontFamily: "Product Sans Medium", color: Color(0xff009254));
 
+  static const TextStyle orderPendingTitle = TextStyle(
+      fontWeight: FontWeight.w700, fontSize: 14, fontFamily: "Product Sans Medium", color: Colors.amber);
+
+  static const TextStyle orderCancelledTitle = TextStyle(
+      fontWeight: FontWeight.w700, fontSize: 14, fontFamily: "Product Sans Medium", color: Colors.red);
+
   static const TextStyle orderDetails = TextStyle(
       fontWeight: FontWeight.w700, fontSize: 14, fontFamily: "Product Sans Medium", color: Colors.black);
 }

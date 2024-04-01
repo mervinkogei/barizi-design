@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 class BottomNavigation extends StatefulWidget {
    final int? currentPageToNavigate;
-  const BottomNavigation({super.key, this.currentPageToNavigate});
+   BottomNavigation({super.key, this.currentPageToNavigate});
 
   @override
   State<BottomNavigation> createState() => _BottomNavigationState();
@@ -58,22 +58,22 @@ final List<GlobalKey<NavigatorState>> _navigatorKeys = [
             items:  <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                 icon:  Icon(Icons.home, size: 23,color: Theme.of(context).cardColor,),
-                activeIcon: Icon(Icons.home, color: Colors.black, size: 23,),
+                activeIcon: const Icon(Icons.home, color: Colors.black, size: 23,),
                 label: "Home",
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.search, size: 23,color: Theme.of(context).cardColor),
-                activeIcon:  Icon(Icons.search, color: Colors.black, size: 23,),
+                activeIcon:  const Icon(Icons.search, color: Colors.black, size: 23,),
                 label: 'Explore',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.shopping_bag_outlined, size: 23,color: Theme.of(context).cardColor),
-                activeIcon:  Icon(Icons.shopping_bag_outlined, color: Colors.black, size: 23,),
+                activeIcon:  const Icon(Icons.shopping_bag_outlined, color: Colors.black, size: 23,),
                 label: 'History',
               ),
              BottomNavigationBarItem(
                 icon: Icon(Icons.person, size: 23,color: Theme.of(context).cardColor),
-                activeIcon: Icon(Icons.person, color: Colors.black, size: 23,),
+                activeIcon: const Icon(Icons.person, color: Colors.black, size: 23,),
                 label: 'Profile',
               ),
             ],

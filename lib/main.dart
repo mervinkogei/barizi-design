@@ -1,4 +1,5 @@
 import 'package:barizi/Screens/bottom_navigation.dart';
+import 'package:barizi/Widget/orderDetails.dart';
 import 'package:barizi/welcome.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const WelcomeScreen(),
-        '/dashboard': (context) => const BottomNavigation(),
+        '/dashboard': (context) =>  BottomNavigation(),
+        '/details': (context) => const OrderDetails()
       },
     );
   }
