@@ -154,7 +154,9 @@ class _HistoryScreenState extends State<HistoryScreen> {
                                                 color: Colors.black
                                                )
                                                 ),
-                                            onPressed: () {},
+                                            onPressed: () =>Navigator.of(context, rootNavigator: true).pushAndRemoveUntil(
+                                            MaterialPageRoute(builder: (context) => const OrderDetails()),
+                                            (route) => false),
                                             child: const Text('Details', style: ThemeStyling.orderDetails,)),
                                       ],
                                     ),
@@ -268,7 +270,9 @@ class _HistoryScreenState extends State<HistoryScreen> {
                                                 color: Colors.black
                                                )
                                                 ),
-                                            onPressed: () {},
+                                            onPressed: () =>Navigator.of(context, rootNavigator: true).pushAndRemoveUntil(
+                                            MaterialPageRoute(builder: (context) => const OrderDetails()),
+                                            (route) => false),
                                             child: const Text('Details', style: ThemeStyling.orderDetails,)),
                                       ],
                                     ),

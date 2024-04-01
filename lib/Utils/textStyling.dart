@@ -7,7 +7,13 @@ abstract class ThemeStyling {
       fontWeight: FontWeight.w700, fontSize: 16, fontFamily: "Product Sans", color: Colors.white);
 
   static const TextStyle welcomeButton = TextStyle(
-      fontWeight: FontWeight.w700, fontSize: 16, fontFamily: "Product Sans", color: Colors.white);
+      fontWeight: FontWeight.w700, fontSize: 16, fontFamily: "Product Sans", color: Colors.white); 
+
+  static const TextStyle orderCardTitle = TextStyle(
+      fontWeight: FontWeight.w700, fontSize: 16, fontFamily: "Nunito", color: Colors.white); 
+
+  static const TextStyle orderCardSubTitle = TextStyle(
+      fontWeight: FontWeight.w600, fontSize: 12, fontFamily: "Nunito", color: Colors.white); 
   
   static const TextStyle titleAppBar = TextStyle(
       fontWeight: FontWeight.w700, fontSize: 20, fontFamily: "Product Sans", color: Colors.black);
