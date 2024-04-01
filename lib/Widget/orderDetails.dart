@@ -1,4 +1,5 @@
 import 'package:barizi/Screens/bottom_navigation.dart';
+import 'package:barizi/Utils/data_function.dart';
 import 'package:barizi/Utils/textStyling.dart';
 import 'package:flutter/material.dart';
 
@@ -223,7 +224,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                       ),
                       backgroundColor: const Color(0xff343434)
                     ),
-                    onPressed: (){}, child: const Text('Rate', style: ThemeStyling.welcomeButton,))),
+                    onPressed: ()=> DataFunction.showAlertDialog(context), child: const Text('Rate', style: ThemeStyling.welcomeButton,))),
               ],
             )
 

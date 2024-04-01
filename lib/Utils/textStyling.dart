@@ -38,4 +38,10 @@ abstract class ThemeStyling {
 
   static const TextStyle orderDetails = TextStyle(
       fontWeight: FontWeight.w700, fontSize: 14, fontFamily: "Product Sans Medium", color: Colors.black);
+
+  static const TextStyle cancelAlert = TextStyle(
+      fontWeight: FontWeight.w500, fontSize: 16, fontFamily: "Product Sans", color: Colors.red);
+
+  static const TextStyle acceptAlert = TextStyle(
+      fontWeight: FontWeight.w700, fontSize: 16, fontFamily: "Product Sans", color: Colors.green);
 }
