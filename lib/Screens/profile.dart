@@ -1,4 +1,5 @@
 import 'package:barizi/Utils/data_function.dart';
+import 'package:barizi/Utils/textStyling.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -14,9 +15,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
        appBar: DataFunction.menuAppBar(context, 'My Profile'),
       drawer: const Drawer(),
-      body: Column(
+      body: const Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          
+          Center(child: Text('Profile Coming Up Next', style: ThemeStyling.titleAppBar,))
         ],
       ),
     );
