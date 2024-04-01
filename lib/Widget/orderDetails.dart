@@ -33,24 +33,25 @@ class _OrderDetailsState extends State<OrderDetails> {
                   ),
                   child: Icon(Icons.arrow_back_ios_new))),
         ),
-        title: Text('Order #1547', style: ThemeStyling.titleAppBar,),
+        title: const Text('Order #1547', style: ThemeStyling.titleAppBar,),
         centerTitle: true,
       ),
+      backgroundColor: const Color(0xffFAFAFA),
       body: Padding(
         padding: const EdgeInsets.only(left: 20, right: 20),
         child: Column(
           children: [
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             Container(
               height: 95,
               decoration: BoxDecoration(
-                  color: Color(0xff575757),
+                  color: const Color(0xff575757),
                   borderRadius: BorderRadius.circular(10)),
               child: Row(
                 children: [
-                  Expanded(
+                  const Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 15.0),
+                      padding: EdgeInsets.only(left: 15.0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,7 +72,162 @@ class _OrderDetailsState extends State<OrderDetails> {
                   )
                 ],
               ),
+            ),
+
+            const SizedBox(height: 20,),
+
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10)
+              ),
+              child: const Padding(
+                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+                child: Column(
+                  children: [
+                    Padding(
+                       padding: EdgeInsets.symmetric(vertical: 8),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('Order number'),
+                          Text('#1514'),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 5,),
+                    Padding(
+                       padding: EdgeInsets.symmetric(vertical: 8),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('Tracking Number'),
+                          Text('IK987362341'),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 5,),
+
+                    Padding(
+                       padding: EdgeInsets.symmetric(vertical: 8),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('Delivery address'),
+                          Text('SBI Building, Software Park'),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 15),
+
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10)
+              ),
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15,vertical: 20),
+                child: Column(
+                  children: [
+                    Padding(
+                       padding: EdgeInsets.symmetric(vertical: 8),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('Maxi Dress'),
+                          Text('x1'),
+                          Text('\$68.00'),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                       padding: EdgeInsets.symmetric(vertical: 8),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('Linen Dress'),
+                          Text('x1'),
+                          Text('\$52.00'),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 15),                
+                    Padding(
+                       padding: EdgeInsets.symmetric(vertical: 8),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('Sub Total'),
+                          Text('120.00'),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                       padding: EdgeInsets.symmetric(vertical: 8),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('Shipping'),
+                          Text('0.00'),
+                        ],
+                      ),
+                    ),                
+                    SizedBox(height: 10,),
+                    Divider(),
+                    SizedBox(height: 15,),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 8),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('Total'),
+                          Text('\$120.00'),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 15,),                
+                  ],
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 25),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                SizedBox(
+                  width: 168, height: 44,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24),
+                        side: const BorderSide(color: Color(0xff777E90))
+                      ),
+                      backgroundColor: Colors.white
+                    ),
+                    onPressed: ()=> Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => BottomNavigation(
+                      ))), child: const Text('Return Home',style: TextStyle(fontSize: 16,fontFamily: 'Product Sans', color:Color(0xff777E90)),))),
+                SizedBox(
+                  width: 119, height: 44,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24),
+                      ),
+                      backgroundColor: const Color(0xff343434)
+                    ),
+                    onPressed: (){}, child: const Text('Rate', style: ThemeStyling.welcomeButton,))),
+              ],
             )
+
+          
           ],
         ),
       ),
