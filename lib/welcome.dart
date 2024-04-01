@@ -42,7 +42,7 @@ class WelcomeScreen extends StatelessWidget {
                     )                    
                   ),
                   ),
-                  onPressed: (){}, child: const Text('Get Started', style: ThemeStyling.welcomeButton)))
+                  onPressed: ()=> Navigator.pushReplacementNamed(context, '/dashboard'), child: const Text('Get Started', style: ThemeStyling.welcomeButton)))
             ],
           ),
       ),

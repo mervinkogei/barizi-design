@@ -1,3 +1,4 @@
+import 'package:barizi/Screens/bottom_navigation.dart';
 import 'package:barizi/welcome.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: 'Product Sans',
       ),
-      home: const WelcomeScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const WelcomeScreen(),
+        '/dashboard': (context) => const BottomNavigation(),
+      },
     );
   }
 }
