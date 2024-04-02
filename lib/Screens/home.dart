@@ -140,7 +140,7 @@ final controller = PageController(viewportFraction: 0.8, keepPage: true);
         
           Container(
             margin: const EdgeInsets.symmetric(vertical: 20),
-            height: 200,
+            height: 180,
             child: ListView.builder(
               itemCount: products.length,
               scrollDirection: Axis.horizontal,
@@ -148,23 +148,44 @@ final controller = PageController(viewportFraction: 0.8, keepPage: true);
               itemBuilder: (context, index){
                 return InkWell(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
                     child: Container(
-                      width: 90,
+                      width: 120,
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
                             height: 126,width: 192,
                             child: Image.asset(products[index]["image"])),
                           const SizedBox(height: 5,),
-                          Text(products[index]["product"]),
+                          Text(products[index]["product"], style: ThemeStyling.productTitle,),
+                          Text(products[index]["price"],style: ThemeStyling.productPrice, ),
                         ],
                       ),
                     ),
                   ),
                 );
-              },
-              
+              },          
+            ),
+          ),
+
+          /**
+           * Add Banner here in this section
+           */
+          Image.asset("images/banner.png"),
+          const SizedBox(height: 20),
+
+          /**
+           * Add a Recommendation here in this section
+           */
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Recommended', style: ThemeStyling.featuredText,),
+                Text('Show all', style: ThemeStyling.showAllText,),
+              ],
             ),
           ),
         

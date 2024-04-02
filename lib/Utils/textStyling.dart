@@ -50,4 +50,10 @@ abstract class ThemeStyling {
   
   static const TextStyle showAllText = TextStyle(
       fontWeight: FontWeight.w700, fontSize: 16, fontFamily: "Product Sans", color: Color(0xff9B9B9B));
+
+  static const TextStyle productPrice = TextStyle(
+      fontWeight: FontWeight.w700, fontSize: 16, fontFamily: "Product Sans", color: Color(0xff000000));
+
+  static const TextStyle productTitle = TextStyle(
+      fontWeight: FontWeight.w500, fontSize: 12, fontFamily: "Product Sans", color: Color(0xff000000));
 }
