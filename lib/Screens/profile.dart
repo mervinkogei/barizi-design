@@ -15,6 +15,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
        appBar: DataFunction.menuAppBar(context, 'My Profile'),
       drawer: const Drawer(),
+      backgroundColor: Colors.white,
       body: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,

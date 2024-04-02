@@ -15,6 +15,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
     return Scaffold(
        appBar: DataFunction.menuAppBar(context, 'Explore/Search'),
       drawer: const Drawer(),
+      backgroundColor: Colors.white,
       body: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,

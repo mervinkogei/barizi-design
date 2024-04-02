@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
         cardColor: const Color(0xffBEBFC4),
         canvasColor: const Color(0xff43484B),
         hintColor: const Color(0xff777E90),
+        focusColor: const Color(0xffF3F3F3),
         useMaterial3: true,
         fontFamily: 'Product Sans',
       ),
