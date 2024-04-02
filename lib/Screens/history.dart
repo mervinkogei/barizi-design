@@ -1,6 +1,6 @@
 import 'package:barizi/Utils/data_function.dart';
 import 'package:barizi/Utils/textStyling.dart';
-import 'package:barizi/Widget/orderDetails.dart';
+import 'package:barizi/Widget/order_details.dart';
 import 'package:flutter/material.dart';
 
 class HistoryScreen extends StatefulWidget {

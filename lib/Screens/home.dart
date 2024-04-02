@@ -1,6 +1,7 @@
 import 'package:barizi/Utils/data_function.dart';
 import 'package:barizi/Utils/dummy_data.dart';
 import 'package:barizi/Utils/textStyling.dart';
+import 'package:barizi/Widget/products_details.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -127,13 +128,15 @@ final controller = PageController(viewportFraction: 0.8, keepPage: true);
            * Featured Products Section Starts here
            */
         
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Feature Products', style: ThemeStyling.featuredText,),
-                Text('Show all', style: ThemeStyling.showAllText,),
+                const Text('Feature Products', style: ThemeStyling.featuredText,),
+                InkWell(
+                  onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const ProductDetails())),
+                  child: const Text('Show all', style: ThemeStyling.showAllText,)),
               ],
             ),
           ),
@@ -178,20 +181,22 @@ final controller = PageController(viewportFraction: 0.8, keepPage: true);
           /**
            * Add a Recommendation here in this section
            */
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15),
+           Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Recommended', style: ThemeStyling.featuredText,),
-                Text('Show all', style: ThemeStyling.showAllText,),
+                const Text('Recommended', style: ThemeStyling.featuredText,),
+                InkWell(
+                  onTap: ()=> Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const ProductDetails())),
+                  child: const Text('Show all', style: ThemeStyling.showAllText,)),
               ],
             ),
           ),
 
           Container(
             margin: const EdgeInsets.symmetric(vertical: 20),
-            height: 180,
+            height: 120,
             child: ListView.builder(
               itemCount: products.length,
               scrollDirection: Axis.horizontal,
@@ -237,6 +242,12 @@ final controller = PageController(viewportFraction: 0.8, keepPage: true);
               },          
             ),
           ),
+
+            /**
+           * Add Banner here in this section
+           */
+          Image.asset("images/banner_2.png"),
+          const SizedBox(height: 20),
         
           ],
         ),

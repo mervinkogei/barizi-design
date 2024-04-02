@@ -1,5 +1,5 @@
 import 'package:barizi/Screens/bottom_navigation.dart';
-import 'package:barizi/Widget/orderDetails.dart';
+import 'package:barizi/Widget/order_details.dart';
 import 'package:barizi/welcome.dart';
 import 'package:flutter/material.dart';
 

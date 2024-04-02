@@ -235,6 +235,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+  rating_bar_updated:
+    dependency: "direct main"
+    description:
+      name: rating_bar_updated
+      sha256: f61c1052deb6d3e0f214c7daaee97dcf6d4548fa2149da3c082f8d51bc530e1c
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -337,5 +345,5 @@ packages:
     source: hosted
     version: "1.0.4"
 sdks:
-  dart: ">=3.2.0 <4.0.0"
+  dart: ">=3.2.0 <3.7.0"
   flutter: ">=3.10.0"
