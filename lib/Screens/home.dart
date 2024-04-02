@@ -1,5 +1,5 @@
 import 'package:barizi/Utils/data_function.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:barizi/Utils/textStyling.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -30,11 +30,24 @@ List productsMenu = [
                 borderRadius: BorderRadius.circular(16),
                 color: Colors.grey.shade300,
               ),
-              margin: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+              margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
               child: Container(
-                height: 200,
+                height: 150,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20)
+                ),
                 child: Center(
-                    child: Image.asset('images/carousel.png'),
+                    child: Stack(
+                      children: [
+                        Image.asset('images/carousel.png'),
+                         Container(
+                alignment: Alignment.topRight,
+                child: const Text(
+                  'Autumn \nCollection \n2021',
+                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 22.0),
+                )),
+                      ],
+                    ),
               ),
             )));
     return Scaffold(
@@ -88,7 +101,7 @@ List productsMenu = [
         Column(
           children: [
              SizedBox(
-                height: 240,
+                height: 180,
                 child: PageView.builder(
                   controller: controller,
                   itemBuilder: (_, index) {
@@ -99,9 +112,9 @@ List productsMenu = [
                           controller: controller,
                           count: pages.length,
                           effect: const WormEffect(
-                            dotHeight: 16,
-                            dotWidth: 16,
-                            type: WormType.thinUnderground,
+                            dotHeight: 10,
+                            dotWidth: 10,
+                            type: WormType.normal,
                           ),
                         ),
                       ],
@@ -111,6 +124,21 @@ List productsMenu = [
               ),
                          
           ],
+        ),
+
+        /**
+         * Featured Products Section Starts here
+         */
+
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('Feature Products', style: ThemeStyling.featuredText,),
+              Text('Show all', style: ThemeStyling.showAllText,),
+            ],
+          ),
         )
 
         ],

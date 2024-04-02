@@ -44,4 +44,10 @@ abstract class ThemeStyling {
 
   static const TextStyle acceptAlert = TextStyle(
       fontWeight: FontWeight.w700, fontSize: 16, fontFamily: "Product Sans", color: Colors.green);
+  
+  static const TextStyle featuredText = TextStyle(
+      fontWeight: FontWeight.w700, fontSize: 20, fontFamily: "Product Sans", color: Colors.black);
+  
+  static const TextStyle showAllText = TextStyle(
+      fontWeight: FontWeight.w700, fontSize: 16, fontFamily: "Product Sans", color: Color(0xff9B9B9B));
 }

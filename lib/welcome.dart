@@ -23,7 +23,7 @@ class WelcomeScreen extends StatelessWidget {
           ),
           child: Column(
             children: [
-              const SizedBox(height: 582,),
+              const SizedBox(height: 512,),
               const Text('Welcome to GemStore!', style: ThemeStyling.welcomeTitle),
               const SizedBox(height: 23),
               const Text('The home for a fashionista',style: ThemeStyling.welcomeSubTitle),
