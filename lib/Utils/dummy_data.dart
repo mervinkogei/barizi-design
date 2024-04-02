@@ -14,9 +14,9 @@
   ];
 
   List recommended = [
-        {"recommended": "White fashion hoodie", "image": "images/product_1.png", "price": "\$ 39.99"},
-        {"recommended": "Cotton T-shirt", "image": "images/product_2.png", "price": "\$ 30.00"},
-        {"recommended": "Sportwear Set", "image": "images/product_1.png", "price": "\$ 89.99"},
-        {"recommended": "Sportwear Set", "image": "images/product_2.png", "price": "\$ 42.99"},
+        {"recommended": "White fashion hoodie", "image": "images/recommend_1.png", "price": "\$ 39.99"},
+        {"recommended": "Cotton T-shirt", "image": "images/recommend_1.png", "price": "\$ 30.00"},
+        {"recommended": "Sportwear Set", "image": "images/recommend_1.png", "price": "\$ 89.99"},
+        {"recommended": "Sportwear Set", "image": "images/recommend_2.png", "price": "\$ 42.99"},
     ];
 

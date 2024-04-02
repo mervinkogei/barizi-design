@@ -188,6 +188,55 @@ final controller = PageController(viewportFraction: 0.8, keepPage: true);
               ],
             ),
           ),
+
+          Container(
+            margin: const EdgeInsets.symmetric(vertical: 20),
+            height: 180,
+            child: ListView.builder(
+              itemCount: products.length,
+              scrollDirection: Axis.horizontal,
+              shrinkWrap: true,
+              itemBuilder: (context, index){
+                return InkWell(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
+                    child: Container(
+                      width: 200,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  children: [
+                                 Container(
+                                    height: 80,width: 120,
+                                    child: Image.asset(products[index]["image"])),
+                                  ],
+                                ),
+                              ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(products[index]["product"], style: ThemeStyling.productTitle,),
+                                Text(products[index]["price"],style: ThemeStyling.productPrice, ),
+                                ],
+                              ),
+                            )
+                            ],
+                          ),
+                          const SizedBox(height: 5,),
+                          
+                        ],
+                      ),
+                    ),
+                  ),
+                );
+              },          
+            ),
+          ),
         
           ],
         ),
